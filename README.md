@@ -1,2 +1,2 @@
-# trainocate-seanm.github.oi
+# trainocate-seanm.github.io
 trainocate repo
