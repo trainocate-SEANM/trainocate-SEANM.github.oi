@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="single.css">
+
+
+</head>
+
+<body>
+
+
+
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+
+
+                <div class="logo">
+                    <h1>Digital Xync</h1>
+                </div>
+                <nav class="menu">
+                    <ul>
+
+                        <li class="menu-items active">Home</li>
+                        <li class="menu-items">About Us</li>
+                        <li class="menu-items">Services</li>
+                        <li class="menu-items">Works</li>
+                        <li class="menu-items">Contact Us</li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="content home active">
+            <div class="container">
+                <div class="text-content">
+                    <h1>Let's Talk Digital</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, cupiditate sit ducimus rem
+                        obcaecati quibusdam libero asperiores molestias commodi quis natus numquam exercitationem
+                        expedita deleniti quo alias soluta reprehenderit. Consequuntur.</p>
+                    <div class="button"><a href="#">Learn More</a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content about-us">
+            <div class="container">
+                <div class="text-content">
+                    <h1>Best designers in town</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, cupiditate sit ducimus rem
+                        obcaecati quibusdam libero asperiores molestias commodi quis natus numquam exercitationem
+                        expedita deleniti quo alias soluta reprehenderit. Consequuntur.</p>
+                    <div class="button"><a href="#">Learn More</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content services">
+            <div class="container">
+                <div class="text-content">
+                    <h1>SEO Solutions</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, cupiditate sit ducimus rem
+                        obcaecati quibusdam libero asperiores molestias commodi quis natus numquam exercitationem
+                        expedita deleniti quo alias soluta reprehenderit. Consequuntur.</p>
+                    <div class="button"><a href="#">Learn More</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+        const btns = document.querySelectorAll(".menu-items");
+        const contents = document.querySelectorAll(".content");
+
+            //function which sets active class to menu buttons
+            var navMenu = function (btnindex) {
+
+            //remove all the active class first
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+             //remove all the active class first
+             contents.forEach((content) => {
+             content.classList.remove("active");
+   
+            });
+
+            // then adding the active to class to clicked item
+            btns[btnindex].classList.add("active");
+            contents[btnindex].classList.add("active");
+            
+            }
+
+            //For loop for all the buttons to have an event listener
+            btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                navMenu(i)
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
